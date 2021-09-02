@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
+
+    <!-- RESET CSS -->
+    <link
+    rel="stylesheet"
+    href="assets/css/reset.css">
+    
+    <!-- STYLESHEET -->
+    <link rel="stylesheet"
+    href="assets/css/styles.css">
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <header class="page-header">
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <main class="body-display-wrapper">
+        <div class="main-display-wrapper">
+            <!-- CITY DISPLAY -->
+            <div class="city-display-wrapper" id="city-wrapper">
+                <div class="city-display-wrapper-inner">
+                    <h2 id="city-display">Placeholder</h2>
+                    <div class="data-display-wrapper">
+                        <p class="temp-display" id="temp">temp placeholder</p>
+                        <p class="wind-display" id="wind">wind placeholder</p>
+                        <p class="humidity-display" id="humidity">humidity placeholder</p>
+                        <p class="uv-display" id="uv">uv index placeholder</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORECAST DISPLAY -->
+            <div class="city-forecast-wrapper" id="forecast-wrapper">
+                <h3>5-Day Forecast</h3>
+                <div class="day-cast" id="forecast-1"></div>
+                <div class="day-cast" id="forecast-2"></div>
+                <div class="day-cast" id="forecast-3"></div>
+                <div class="day-cast" id="forecast-4"></div>
+                <div class="day-cast" id="forecast-5"></div>
+            </div>
+        </div>
+
+        <!-- LEFT SIDEBAR -->
+        <section class="left-sidebar-wrapper">
+            <div class="left-sidebar">
+                <h4>Search For A City:</h4>
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Type a city here." id="city-input" class="city-input-form">
+                    <button type="text" class="search-button" id="city-input-button">Search</button>
+                </div>
+            </div>
+
+            <div class="city-display-wrapper">
+                <table class="city-display" id="city-display-table">
+
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- LINKING JQUERY & JAVASCRIPT -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+:root {
+    --font: font-family: 'Kanit', sans-serif;
+    --border: 1px solid black;
+    --margin: 10px;
+}
+
+html {
+    max-height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    border: var(--border);
+    background: linear-gradient(to right, #3b6ec4, #230555);
+}
+
+h1 {
+    color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 250%;
+}
+
+.body-display-wrapper {
+    display: flex;
+    flex-direction: row wrap;
+}
+
+.main-display-wrapper {
+    flex: 70%;
+    order: 2;
+}
+
+.city-display-wrapper {
+    margin: var(--margin);
+    border: var(--border);
+}
+
+.city-forecast-wrapper,
+.data-display-wrapper,
+.city-display-wrapper-inner {
+    margin: var(--margin);
+}
+
+.data-display-wrapper > p {
+    margin-top: 20px;
+}
+
+.data-display-wrapper:last-child {
+    margin-bottom: 20px;
+}
+
+.left-sidebar-wrapper {
+    flex: 30%;
+    order: 1;
+}
+
+.left-sidebar {
+    display: flex;
+    flex-direction: column;
+    margin: var(--margin);
+    padding-bottom: (--margin);
+    border-bottom: 3px solid grey;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.city-input-form,
+.search-button {
+    width: 100%;
+    height: 35px;
+    margin-top: 8px;
+    border-radius: 5px;
+}
+
+.search-button {
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    background: #3b6ec4;
+    border: none;
+}
+
+.city-input-form {
+    border: var(--border);
+}
+
+/* BUTTON HOVER */
+.search-button:hover {
+    background: #3766b8da;
+}
+
+.search-button:active {
+    background: #244886ee;
+}
