@@ -32,10 +32,10 @@
                 <div class="city-display-wrapper-inner">
                     <h2 id="city-display">Placeholder</h2>
                     <div class="data-display-wrapper">
-                        <p class="temp-display" id="temp">temp placeholder</p>
-                        <p class="wind-display" id="wind">wind placeholder</p>
-                        <p class="humidity-display" id="humidity">humidity placeholder</p>
-                        <p class="uv-display" id="uv">uv index placeholder</p>
+                        <p class="temp-display" id="temp">temp: </p>
+                        <p class="wind-display" id="wind">wind: </p>
+                        <p class="humidity-display" id="humidity">humidity: </p>
+                        <p class="uv-display" id="uv">uv index: </p>
                     </div>
                 </div>
             </div>
@@ -43,11 +43,13 @@
             <!-- FORECAST DISPLAY -->
             <div class="city-forecast-wrapper" id="forecast-wrapper">
                 <h3>5-Day Forecast</h3>
-                <div class="day-cast" id="forecast-1"></div>
-                <div class="day-cast" id="forecast-2"></div>
-                <div class="day-cast" id="forecast-3"></div>
-                <div class="day-cast" id="forecast-4"></div>
-                <div class="day-cast" id="forecast-5"></div>
+                <div class="day-cast-wrapper">
+                    <div class="day-cast" id="forecast-1"></div>
+                    <div class="day-cast" id="forecast-2"></div>
+                    <div class="day-cast" id="forecast-3"></div>
+                    <div class="day-cast" id="forecast-4"></div>
+                    <div class="day-cast" id="forecast-5"></div>
+                </div>
             </div>
         </div>
 
@@ -62,9 +64,9 @@
             </div>
 
             <div class="city-display-wrapper">
-                <table class="city-display" id="city-display-table">
-
-                </table>
+                <div class="city-display" id="city-display-table">
+                    
+                </div>
             </div>
         </section>
     </main>
@@ -75,3 +77,10 @@
     <script src="assets/js/script.js"></script>
 </body>
 </html>
+
+<!-- 
+N = + lat
+S = - lat
+E = + lon
+W = - lon 
+-->

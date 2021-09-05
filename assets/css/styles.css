@@ -47,6 +47,26 @@ h6 {
     border: var(--border);
 }
 
+.city-display {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: none;
+    height: 325px;
+    overflow-y: scroll;
+}
+
+button {
+    font-size: 130%;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: white; 
+    background: grey;
+    margin: 7px;
+    padding: 5px 0;
+}
+
 .city-forecast-wrapper,
 .data-display-wrapper,
 .city-display-wrapper-inner {
@@ -96,6 +116,18 @@ h6 {
 }
 
 .city-input-form {
+    border: var(--border);
+}
+
+.day-cast-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.day-cast {
+    height: 200px;
+    width: 20%;
+    margin: 10px;
     border: var(--border);
 }
 
