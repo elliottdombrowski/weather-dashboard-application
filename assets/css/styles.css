@@ -86,6 +86,17 @@ button {
     order: 1;
 }
 
+.card-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.card {
+    background: rgb(25, 24, 32);
+    color: white;
+    margin: 0 10px;
+}
+
 .left-sidebar {
     display: flex;
     flex-direction: column;

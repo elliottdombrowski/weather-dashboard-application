@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
 
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
     <!-- RESET CSS -->
     <link
     rel="stylesheet"
@@ -21,21 +24,24 @@
     <title>Weather Dashboard</title>
 </head>
 <body>
+    <!-- HEADER SECTION -->
     <header class="page-header">
         <h1>Weather Dashboard</h1>
     </header>
 
+    <!-- MAIN BODY -->
     <main class="body-display-wrapper">
         <div class="main-display-wrapper">
             <!-- CITY DISPLAY -->
             <div class="city-display-wrapper" id="city-wrapper">
                 <div class="city-display-wrapper-inner">
-                    <h2 id="city-display">Placeholder</h2>
+                    <h2 id="city-display">PLACEHOLDER</h2>
                     <div class="data-display-wrapper">
-                        <p class="temp-display" id="temp">temp: </p>
-                        <p class="wind-display" id="wind">wind: </p>
-                        <p class="humidity-display" id="humidity">humidity: </p>
-                        <p class="uv-display" id="uv">uv index: </p>
+                        <p class="current-day" id="moment"></p>
+                        <p class="temp-display" id="temp0">Temp: </p>
+                        <p class="wind-display" id="wind0">Wind: </p>
+                        <p class="humidity-display" id="humidity0">Humidity: </p>
+                        <p class="uv-display" id="uv">UV Index: </p>
                     </div>
                 </div>
             </div>
@@ -43,12 +49,52 @@
             <!-- FORECAST DISPLAY -->
             <div class="city-forecast-wrapper" id="forecast-wrapper">
                 <h3>5-Day Forecast</h3>
-                <div class="day-cast-wrapper">
-                    <div class="day-cast" id="forecast-1"></div>
-                    <div class="day-cast" id="forecast-2"></div>
-                    <div class="day-cast" id="forecast-3"></div>
-                    <div class="day-cast" id="forecast-4"></div>
-                    <div class="day-cast" id="forecast-5"></div>
+                <div class="card-wrapper">
+                    <div class="card" style="width: 12rem;">
+                        <div class="card-body">
+                        <h5 class="card-title">1</h5>
+                        <img id="weather-icon0" src="">
+                        <p class="card-text" id="temp1"></p>
+                        <p class="card-text" id="wind1"></p>
+                        <p class="card-text" id="humidity1"></p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 12rem;">
+                        <div class="card-body">
+                        <h5 class="card-title">2</h5>
+                        <img id="weather-icon1" src="">
+                        <p class="card-text" id="temp2"></p>
+                        <p class="card-text" id="wind2"></p>
+                        <p class="card-text" id="humidity2"></p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 12rem;">
+                        <div class="card-body">
+                        <h5 class="card-title">3</h5>
+                        <img id="weather-icon2" src="">
+                        <p class="card-text" id="temp3"></p>
+                        <p class="card-text" id="wind3"></p>
+                        <p class="card-text" id="humidity3"></p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 12rem;">
+                        <div class="card-body">
+                        <h5 class="card-title">4</h5>
+                        <img id="weather-icon3" src="">
+                        <p class="card-text" id="temp4"></p>
+                        <p class="card-text" id="wind4"></p>
+                        <p class="card-text" id="humidity4"></p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 12rem;">
+                        <div class="card-body">
+                        <h5 class="card-title">5</h5>
+                        <img id="weather-icon4" src="">
+                        <p class="card-text" id="temp5"></p>
+                        <p class="card-text" id="wind5"></p>
+                        <p class="card-text" id="humidity5"></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -71,16 +117,10 @@
         </section>
     </main>
 
-    <!-- LINKING JQUERY & JAVASCRIPT -->
+    <!-- LINKING BOOTSTRAP JS, JQUERY, & JAVASCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
-
-<!-- 
-N = + lat
-S = - lat
-E = + lon
-W = - lon 
--->
