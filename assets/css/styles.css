@@ -26,10 +26,17 @@ h1,
 h2,
 h3,
 h4,
-h5,
 h6 {
     font-family: 'Kanit', sans-serif;
     font-size: 250%;
+}
+
+h5 {
+    font-size: 180%;
+}
+
+h2 {
+    display: inline;
 }
 
 .body-display-wrapper {
@@ -141,6 +148,20 @@ button {
     margin: 10px;
     border: var(--border);
 }
+
+.btn-sm {
+    margin: 0;
+}
+
+/* .btn-orange {
+    color: black;
+    background: orange;
+}
+
+.btn-purple {
+    color: black;
+    background: purple;
+} */
 
 /* BUTTON HOVER */
 .search-button:hover {

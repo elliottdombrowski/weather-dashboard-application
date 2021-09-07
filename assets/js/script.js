@@ -78,13 +78,6 @@ function saveCity(cityName) {
 function callCity() {
     //Forces all user input to uppercase, for uniformity on the page
     var city = input.val().toUpperCase();
-
-    //FIX THIS
-    //FIX THIS
-    //FIX THIS
-    //FIX THIS
-    //FIX THIS
-    //FIX THIS
     var queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${APIKey}`
 
     $.ajax({
@@ -98,17 +91,38 @@ function callCity() {
 
         $.ajax({
             //Then, pull new API URL with lat/lon of chosen city
-            url: `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely,hourly&appid=${APIKey}`
+            url: `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely,hourly&appid=${APIKey}&units=imperial`
         }).then(function(data) {
 
+            header.text(city + " ");
+
+            var uvNum = data.daily[0].uvi;
+            $("#uv").text("UV Index: ");
+            var uvButton = $("<button>").addClass("btn-sm").text(uvNum);
+
+            if (uvNum < 3) {
+                uvButton.addClass("btn-success")
+            } else if (uvNum < 6) {
+                uvButton.addClass("btn-warning")
+            } else if (uvNum < 8) {
+                uvButton.addClass("btn-warning").css("background", "orange")
+            } else if (uvNum < 11) {
+                uvButton.addClass("btn-danger")
+            } else {
+                uvButton.addClass("btn-danger").css("background", "purple")
+            }
+
+            $("#uv").append(uvButton);
+
+            console.log(data);
             //Loop through array, and increment through API's daily array
             //Will append current data for city to main containers, and for each consecutive day to respective containers.
             for (var i = 0; i < 6; i++){
-                $("#weather-icon" + i).attr("src", "http://openweathermap.org/img/wn/" + data.daily[i].weather[0]);
+                $("#weather-icon" + i).attr("src", "http://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + ".png");
+                $("#moment" + i).text("(" + new Date(data.daily[i].dt * 1000).toLocaleDateString() + ")")
                 $("#temp" + i).text("Temp: " + data.daily[i].temp.day);
                 $("#wind" + i).text("Wind: " + data.daily[i].wind_speed);
                 $("#humidity" + i).text("Humidity: " + data.daily[i].humidity);
-                $("#uv").text("UV Index: " + data.daily[i].uvi);
             }
 
             saveCity(city)
