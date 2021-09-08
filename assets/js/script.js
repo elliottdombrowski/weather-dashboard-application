@@ -120,9 +120,9 @@ function callCity() {
             for (var i = 0; i < 6; i++){
                 $("#weather-icon" + i).attr("src", "http://openweathermap.org/img/wn/" + data.daily[i].weather[0].icon + ".png");
                 $("#moment" + i).text("(" + new Date(data.daily[i].dt * 1000).toLocaleDateString() + ")")
-                $("#temp" + i).text("Temp: " + data.daily[i].temp.day);
-                $("#wind" + i).text("Wind: " + data.daily[i].wind_speed);
-                $("#humidity" + i).text("Humidity: " + data.daily[i].humidity);
+                $("#temp" + i).text("Temp: " + data.daily[i].temp.day + " F");
+                $("#wind" + i).text("Wind: " + data.daily[i].wind_speed + "mph");
+                $("#humidity" + i).text("Humidity: " + data.daily[i].humidity + "%");
             }
 
             saveCity(city)
